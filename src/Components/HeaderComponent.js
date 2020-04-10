@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return(
             <div className="container">
-                <Jumbotron />
+                <Jumbotron className="bg-transparent mt-4" />
                 <hr class="my-1" />
                 <header>
                     <div className="container">
