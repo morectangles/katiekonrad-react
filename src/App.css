@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.jumbotron {
+  background: none;
+  background-image: url(./media/namewritten.png);
+  background-size: contain;
+  background-position: center;
+}
