@@ -3,6 +3,7 @@ import { Row, Button, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faInstagramSquare, faVimeoV, faGithubSquare  } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 
@@ -11,8 +12,9 @@ class Footer extends Component {
         return(
             <footer className="site-footer mt-5">
                 <div className="container">
-                    <Row>
+                    <Row className="mb-3">
                         <Col>
+                        
                             <a className="btn" role="button" href="https://www.instagram.com/morectangles/?hl=en">
                                 <FontAwesomeIcon icon={faInstagramSquare} size="3x" />
                             </a>

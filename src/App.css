@@ -10,15 +10,35 @@
   }
 }
 
-
+/*
 .jumbotron {
-  background-image: url(./media/namewritten.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+*/
+
+.jumbotron {
+  height: 150px;
+}
+
+.jumbotron img {
+  height: 100px;
 }
 
 video {
   width: 100%;
   vertical-align: middle;
+}
+
+#aboutGif {
+  display: flex;
+  margin: auto;
+
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

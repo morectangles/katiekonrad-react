@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
-class Works extends Component {
+class Educator extends Component {
     render() {
         return(
             <div>
-                
+
             </div>
-        )
+        );
     }
 }
 
-
-export default Works;
+export default Educator;
