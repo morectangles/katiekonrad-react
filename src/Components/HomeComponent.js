@@ -12,7 +12,7 @@ class Home extends Component {
                 <Row>
                     <Col md="4">
                         <NavLink href="">
-                            <video height="300px" autoPlay loop muted playsInline src={bubbleVideo} />
+                            <video height="300px" autoPlay loop muted playsInline alt="bubbling head" src={bubbleVideo} />
                         </NavLink>
                         <Row>
                             <h2 className="col mx-auto" width="300px">Artist</h2>
@@ -20,7 +20,7 @@ class Home extends Component {
                     </Col>
                     <Col md="4">
                         <NavLink href="">
-                            <video height="300px" autoPlay loop muted playsInline src={educatorVideo} />
+                            <video height="300px" autoPlay loop muted playsInline alt="images of children's art" src={educatorVideo} />
                         </NavLink>
                         <Row>
                             <h2 className="col mx-auto" width="300px">Educator</h2>
@@ -28,7 +28,7 @@ class Home extends Component {
                     </Col>
                     <Col md="4">
                         <NavLink href="">
-                            <img height="300px" autoPlay loop muted playsInline src={aboutGif} />
+                            <img height="300px" width="300px" autoPlay loop muted playsInline alt="author pixelated" src={aboutGif} />
                         </NavLink>
                         <Row>
                             <h2 className="col mx-auto" width="300px">About</h2>
