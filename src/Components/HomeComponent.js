@@ -7,12 +7,14 @@ import aboutGif from '../media/compyfinal.gif';
 
 class Home extends Component {
 
+
+
     render() {
         return(
             <div className="mt-5 ml-5 mr-5">
                 <Row className="mx-auto">
                     <Col md="4" >
-                        <Link to="/works">
+                        <Link to="/works"  >
                             <video height="300px" autoPlay loop muted playsInline alt="bubbling head" src={bubbleVideo} />
                         </Link>
                         <Row className="mb-5">
