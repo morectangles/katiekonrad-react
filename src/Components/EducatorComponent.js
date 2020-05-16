@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class Educator extends Component {
     render() {
         return(
