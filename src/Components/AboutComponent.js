@@ -14,13 +14,14 @@ class About extends Component {
 
         const list = { hidden: { opacity: 0 }, visible: { opacity: 1} }
         const item = { hidden: { x: -10, opacity: 0 }, visible: { opacity: 1} }
+        const item2 = { hidden: { x: -10, opacity: 0 }, visible: { opacity: 1} }
 
         return(
             <div>
                 <motion.ul style={{ listStyleType: 'none', fontSize: 40 }} initial='hidden' animate="visible" variants={list} transition={{ duration: 2, staggerChildren: true }} >
                     <motion.li variants={item} fontSize={300} >{`Katie is an educator,`}</motion.li>
                     <motion.li variants={item}>{`artist,`}</motion.li>
-                    <motion.li variants={item}>{`and front end developer living in Pittsburgh, PA.`}</motion.li>
+                    <motion.li variants={item}>{`and junior developer`}</motion.li><motion.li variants={item}>{` living in Pittsburgh, PA.`}</motion.li>
                 </motion.ul>
                 {/*
                 <motion.div initial="hidden"

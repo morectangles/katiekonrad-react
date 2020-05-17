@@ -2,13 +2,13 @@ export const CERAMICS = [
     {
         id: 0,
         name: 'Bubble Man',
-        description: 'A large cobalt covered man bubbles incessantly.  Inspired by life-changing treatment for a vitamin deficiency.',
+        description: 'A large cobalt blue man bubbles incessantly.  Inspired by life-changing treatment for a vitamin deficiency.',
         video: "https://player.vimeo.com/video/385172521?autoplay=1&loop=1&autopause=0&muted=1" 
     },
     {
         id: 1,
         name: 'Crying Fountain',
-        description: 'A person cries incessantly.  Inspired by trauma associated with a work injury that resulted in lifelong chronic pain.',
+        description: 'A person cries incessantly inside a suitcase.  Inspired by trauma from a workplace injury that resulted in lifelong chronic pain.',
         video: "https://player.vimeo.com/video/222875603?autoplay=1&loop=1&autopause=0&muted=1"
     },
     {
@@ -38,7 +38,7 @@ export const CERAMICS = [
     {
         id: 6,
         name: 'Bag Flask',
-        description: 'Inspired by a red velvet drawstring bag I saw in a magazine when I was a small child.  Stoneware.',
+        description: 'Inspired by a red velvet drawstring bag I wanted desperately as a small child.  Stoneware.',
         image: '/ceramics/bagflask.jpg'
     },
     {

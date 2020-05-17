@@ -21,7 +21,8 @@ function RenderItem({teaching}) {
                     <Link to={`/educator/${teaching.id}`}>
                     <Col className="wrapper">
                         <Iframe url={teaching.video}
-                        id={teaching.id}/>
+                        id={teaching.id}
+                        frameBorder="0"/>
                     </Col>
                     <CardTitle style={{fontSize:30}}>{teaching.name}</CardTitle>
                     <CardSubtitle>{teaching.description}</CardSubtitle>
@@ -73,7 +74,7 @@ class Educator extends Component {
 
         const works = this.state.teachings.map( teaching => {
             return(
-                <div key={teaching.id} className="col-md-5 m-1 mx-auto">
+                <div key={teaching.id} className="col-md-5 m-1 mx-auto my-auto">
                     <RenderItem teaching={teaching} />
                 </div>
             )}
@@ -81,7 +82,6 @@ class Educator extends Component {
 
         return(
             <div>
-                <h1>Works</h1>
                 <Row >
                     {works}
                 </Row>
