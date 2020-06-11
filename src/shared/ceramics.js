@@ -26,13 +26,13 @@ export const CERAMICS = [
     {
         id: 4,
         name: 'Swirly #5',
-        description: 'A form I return to.  Woodfired Stoneware.',
+        description: 'Woodfired Stoneware.',
         image: '/ceramics/swirly5.png'
     },
     {
         id: 5,
         name: 'Hands',
-        description: 'Hands stretch out of sleeves.  Wrists are hollowed to fill with drink.  Stoneware.',
+        description: 'Hands stretch out of many layers.  Wrists are hollowed to fill with drink.  Stoneware.',
         image: '/ceramics/hands.jpg'
     },
     {

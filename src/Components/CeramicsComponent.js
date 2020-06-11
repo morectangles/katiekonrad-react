@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardImg, CardImgOverlay, CardTitle, CardSubtitle, Row, Col } from 'reactstrap';
-import { TEACHINGS } from '../shared/teachings';
+import { CERAMICS } from '../shared/ceramics';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform } from 'react-animation-components';
 import Iframe from 'react-iframe';
 
+ 
+function RenderItem({ceramics}) {
 
-function RenderItem({teaching}) {
-
-    if (teaching.video) {
+    if (ceramics.video) {
         return(
             <FadeTransform
             in 
@@ -18,14 +18,14 @@ function RenderItem({teaching}) {
                 }}
             >
                 <Card style={{border: 'none'}}>
-                    <Link to={`/educator/${teaching.id}`}>
+                    <Link to={`/educator/${ceramics.id}`}>
                     <Col className="wrapper">
-                        <Iframe url={teaching.video}
-                        id={teaching.id}
+                        <Iframe url={ceramics.video}
+                        id={ceramics.id}
                         frameBorder="0"/>
                     </Col>
-                    <CardTitle style={{fontSize:30}}>{teaching.name}</CardTitle>
-                    <CardSubtitle>{teaching.description}</CardSubtitle>
+                    <CardTitle style={{fontSize:30}}>{ceramics.name}</CardTitle>
+                    <CardSubtitle>{ceramics.description}</CardSubtitle>
                     </Link>
                 </Card>
             </FadeTransform>
@@ -39,10 +39,10 @@ function RenderItem({teaching}) {
                 }}
             >
                 <Card style={{border: 'none'}}>
-                    <Link to={`/educator/${teaching.id}`}>
-                        <CardImg width="100%" src={process.env.PUBLIC_URL + teaching.image} /* alt={item.name} */ />
-                        <CardTitle style={{fontSize: 30}}>{teaching.name}</CardTitle>
-                        <CardSubtitle>{teaching.description}</CardSubtitle>
+                    <Link to={`/educator/${ceramics.id}`}>
+                        <CardImg width="100%" src={process.env.PUBLIC_URL + ceramics.image} /* alt={item.name} */ />
+                        <CardTitle style={{fontSize: 30}}>{ceramics.name}</CardTitle>
+                        <CardSubtitle>{ceramics.description}</CardSubtitle>
                     </Link>
                 </Card>
             </FadeTransform>
@@ -51,12 +51,12 @@ function RenderItem({teaching}) {
 }
 
 
-class Educator extends Component {
+class Ceramics extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            teachings: TEACHINGS,
+            ceramics: CERAMICS,
             //isTeachingsOpen: true
         };
         //this.toggleTeachings = this.isTeachingsOpen.bind(this);
@@ -72,17 +72,17 @@ class Educator extends Component {
 */
     render() {
 
-        const works = this.state.teachings.map( teaching => {
+        const works = this.state.ceramics.map( ceramics => {
             return(
-                <div key={teaching.id} className="col-md-5 m-1 mx-auto my-auto">
-                    <RenderItem teaching={teaching} />
+                <div key={ceramics.id} className="col-md-5 m-1 mx-auto my-auto">
+                    <RenderItem ceramics={ceramics} />
                 </div>
             )}
         )
 
         return(
             <div>
-                <h1>Educator</h1>
+                <h1>Ceramics</h1>
                 <Row >
                 
                     {works}
@@ -93,4 +93,4 @@ class Educator extends Component {
     }
 }
 
-export default Educator;
+export default Ceramics;

@@ -5,6 +5,8 @@ import Footer from './FooterComponent';
 import Educator from './EducatorComponent';
 import About from './AboutComponent';
 import Works from './WorksComponent';
+import Design from './DesignComponent';
+import Ceramics from './CeramicsComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 
 class Main extends Component {
@@ -24,6 +26,8 @@ class Main extends Component {
                     <Route path='/educator' component={Educator} />
                     <Route path='/about' component={About} />
                     <Route path='/works' component={Works} />
+                    <Route path='/design' component={Design} />
+                    <Route path='/ceramics' component={Ceramics} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />

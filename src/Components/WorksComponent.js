@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardImg, CardImgOverlay, CardTitle, CardBody, Row, Col, Button } from 'reactstrap';
+import { Card, CardImg, CardSubtitle, CardTitle, CardBody, Row, Col, Button } from 'reactstrap';
 import { DESIGN } from '../shared/design';
 import { CERAMICS } from '../shared/ceramics';
+import { TEACHINGS } from '../shared/teachings';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform } from 'react-animation-components';
 import Iframe from 'react-iframe';
@@ -54,16 +55,27 @@ class Categories extends Component {
     
 
         return(
-            <motion.ul style={{ listStyleType: 'none', fontSize: 40 }} initial='hidden' animate="visible" variants={list} transition={{ duration: 2, staggerChildren: true }} >
-                <motion.li variants={item} >
-                    {`Ceramics  `}
-                </motion.li>
-                <motion.li  variants={item}>
-                    {`Design  `}
-                </motion.li>
-                <motion.li variants={item}>
-                    {`Education`}
-                </motion.li>
+            <motion.ul style={{ listStyleType: 'none', fontSize: 40, height: "100%" }} className="mr-3" initial='hidden' animate="visible" variants={list} transition={{ duration: 2, staggerChildren: true }} >
+                <Link to="/ceramics">
+                    <motion.li variants={item}>
+                        {`Developer`}
+                    </motion.li>
+                </Link>
+                <Link to="/ceramics">
+                    <motion.li variants={item} >
+                        {`Artist`}
+                    </motion.li>
+                </Link>
+                <Link to="/design">
+                    <motion.li  variants={item}>
+                        {`Designer`}
+                    </motion.li>
+                </Link>
+                <Link to="/educator">
+                    <motion.li variants={item}>
+                        {`Educator`}
+                    </motion.li>
+                </Link>
             </motion.ul>
         )
     }
@@ -113,6 +125,92 @@ function RenderItem({ceramics}) {
     }
 }
 
+function RenderItem2({design}) {
+/*
+    if (design.video) {
+        return(
+            <FadeTransform
+            in 
+                transformProps={{
+                    exitTransform: 'scale(0.9) '
+                }}
+            >
+                <Card style={{border: 'none'}}>
+                    <Link to={`/works/${design.id}`}>
+                        <Col  className="wrapper">
+                            <Iframe url={design.video}
+                                id={design.id}
+                                frameBorder="0" />
+                            </Col>
+                        <CardTitle style={{fontSize: 30}} className="m-1">{design.name}</CardTitle>
+                        <CardBody>{design.description}</CardBody>
+                    </Link>
+                </Card>
+            </FadeTransform>
+        )
+    } else { */
+        return(
+            <FadeTransform
+            in 
+                transformProps={{
+                    exitTransform: 'scale(0.9) '
+                }}
+            >
+                <Card style={{border: 'none'}}>
+                    <Link to={`/works/${design.id}`}>
+                        <CardImg width="100%" src={process.env.PUBLIC_URL + design.image} /* alt={item.name} */ />
+                        <CardTitle style={{fontSize: 30}}>{design.name}</CardTitle>
+                        <CardBody>{design.description}</CardBody>
+                    </Link>
+                </Card>
+            </FadeTransform>
+        )
+        
+}
+
+function RenderItem3({teaching}) {
+
+    if (teaching.video) {
+        return(
+            <FadeTransform
+            in 
+                transformProps={{
+                    exitTransform: 'scale(0.9) '
+                }}
+            >
+                <Card style={{border: 'none'}}>
+                    <Link to={`/educator/${teaching.id}`}>
+                    <Col className="wrapper">
+                        <Iframe url={teaching.video}
+                        id={teaching.id}
+                        frameBorder="0"/>
+                    </Col>
+                    <CardTitle style={{fontSize:30}}>{teaching.name}</CardTitle>
+                    <CardSubtitle>{teaching.description}</CardSubtitle>
+                    </Link>
+                </Card>
+            </FadeTransform>
+        )
+    } else {
+        return (
+            <FadeTransform
+            in 
+                transformProps={{
+                    exitTransform: 'scale(0.9) '
+                }}
+            >
+                <Card style={{border: 'none'}}>
+                    <Link to={`/educator/${teaching.id}`}>
+                        <CardImg width="100%" src={process.env.PUBLIC_URL + teaching.image} /* alt={item.name} */ />
+                        <CardTitle style={{fontSize: 30}}>{teaching.name}</CardTitle>
+                        <CardSubtitle>{teaching.description}</CardSubtitle>
+                    </Link>
+                </Card>
+            </FadeTransform>
+        )
+    }
+}
+
 class Works extends Component {
     constructor(props) {
         super(props);
@@ -120,6 +218,7 @@ class Works extends Component {
         this.state = {
             design: DESIGN,
             ceramics: CERAMICS,
+            teachings: TEACHINGS
             //isCeramicsOpen: true,
             //isDesignOpen: true
         };
@@ -157,12 +256,34 @@ class Works extends Component {
             )}
         );
 
+        const works2 = this.state.design.map( design => {
+            return(
+                <Col key={design.id} className="col-12 col-md-5 m-1 mx-auto my-auto">
+                    <RenderItem2 design={design} />
+                </Col>
+            )}
+        );
+
+        const works3 = this.state.teachings.map( teachings => {
+            return(
+                <Col key={teachings.id} className="col-12 col-md-5 m-1 mx-auto my-auto">
+                    <RenderItem3 teaching={teachings} />
+                </Col>
+            )}
+        );
+
 
         return(
             <div>
                 <Categories />
                 <Row className="" >
                     {works}
+                </Row>
+                <Row className="" >
+                    {works2}
+                </Row>
+                <Row className="" >
+                    {works3}
                 </Row>
 
             </div>

@@ -48,12 +48,6 @@ video {
   vertical-align: middle;
 }
 
-#aboutGif {
-  display: flex;
-  margin: auto;
-
-}
-
 .box {
   display: flex;
   align-items: center;

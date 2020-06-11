@@ -7,7 +7,7 @@ class Header extends Component {
     render() {
         return(
             <div className="container">
-                <Jumbotron className="bg-transparent mt-2">
+                <Jumbotron className="bg-transparent mt-2" style={{ alignItems: "center" }}>
                     <Link to="/home" >
                         <img src={nameWritten} height="auto" className="" />
                     </Link>
@@ -15,7 +15,7 @@ class Header extends Component {
                 <hr class="my-1" />
                 <header>
                     <div className="container">
-                        <Nav className="navbar navbar-expand navbar-light justify-content-center">
+                        <Nav className="navbar navbar-expand navbar-light" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                             <Navbar>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/home">home </NavLink>

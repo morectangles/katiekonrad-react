@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import bubbleVideo from '../media/bubbletest.mp4';
-import educatorVideo from '../media/educator.mp4';
-import aboutGif from '../media/compyfinal.gif';
+import { HOME } from '../shared/home';
 
 class Home extends Component {
-
+    renderBox() {
+        
+    }
 
 
     render() {
@@ -15,7 +15,7 @@ class Home extends Component {
                 <Row className="mx-auto">
                     <Col md="4" >
                         <Link to="/works"  >
-                            <video height="300px" autoPlay loop muted playsInline alt="bubbling head" src={bubbleVideo} />
+                            <video height="300px" autoPlay loop muted playsInline alt={HOME[0].description} src={HOME[0].video} />
                         </Link>
                         <Row className="mb-5">
                             <h2 className="col mx-auto" width="300px">Creator</h2>
@@ -23,7 +23,7 @@ class Home extends Component {
                     </Col>
                     <Col md="4" >
                         <Link to="/educator">
-                            <video height="300px" autoPlay loop muted playsInline alt="images of children's art" src={educatorVideo} />
+                            <video height="300px" autoPlay loop muted playsInline alt={HOME[1].description} src={HOME[1].video} />
                         </Link>
                         <Row className="mb-5">
                             <h2 className="col mx-auto" width="300px">Educator</h2>
@@ -31,7 +31,7 @@ class Home extends Component {
                     </Col>
                     <Col md="4" >
                         <Link to="/about">
-                            <img id="aboutGif" height="300px" width="300px" alt="author pixelated" src={aboutGif} />
+                            <video height="300px" autoPlay loop muted playsInline alt={HOME[2].description} src={HOME[2].video} />
                         </Link>
                         <Row className="mb-3">
                             <h2 className="col mx-auto" width="300px">About</h2>

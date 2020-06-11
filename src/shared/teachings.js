@@ -2,7 +2,7 @@ export const TEACHINGS = [
     {
         id: 0,
         name: 'Monster Tales',
-        description: '2-3rd graders were tasking with creating a monster, a story, props, and sound effects in small groups.',
+        description: '2-3rd graders were tasked with creating a monster, a story, props, and sound effects in small groups.',
         video: "https://player.vimeo.com/video/394594149"
     },
     {
@@ -20,7 +20,7 @@ export const TEACHINGS = [
     {
         id: 3,
         name: 'Piggy Banks',
-        description: '2nd and 3rd graders made 2 pinch pots which were put together with assistance, then decorated and designed their piggy bank.',
+        description: '2nd and 3rd graders made 2 pinch pots which were put together with assistance.  They then designed and decorated their "piggy" bank.',
         image: '/teaching/IMG_6339.jpg'
     }
 ]
