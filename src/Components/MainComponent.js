@@ -7,7 +7,10 @@ import About from './AboutComponent';
 import Works from './WorksComponent';
 import Design from './DesignComponent';
 import Ceramics from './CeramicsComponent';
+import Developer from './DeveloperComponent';
+
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { faKickstarter } from '@fortawesome/free-brands-svg-icons';
 
 class Main extends Component {
     render() {
@@ -28,6 +31,7 @@ class Main extends Component {
                     <Route path='/works' component={Works} />
                     <Route path='/design' component={Design} />
                     <Route path='/ceramics' component={Ceramics} />
+                    <Route path='/developer' component={Developer} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />

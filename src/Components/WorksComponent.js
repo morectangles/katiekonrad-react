@@ -4,6 +4,7 @@ import { Card, CardImg, CardSubtitle, CardTitle, CardBody, Row, Col, Button } fr
 import { DESIGN } from '../shared/design';
 import { CERAMICS } from '../shared/ceramics';
 import { TEACHINGS } from '../shared/teachings';
+import { DEVELOPER } from '../shared/developer';
 import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform } from 'react-animation-components';
 import Iframe from 'react-iframe';
@@ -56,28 +57,71 @@ class Categories extends Component {
 
         return(
             <motion.ul style={{ listStyleType: 'none', fontSize: 40, height: "100%" }} className="mr-3" initial='hidden' animate="visible" variants={list} transition={{ duration: 2, staggerChildren: true }} >
-                <Link to="/ceramics">
+                <Link to="/developer">
                     <motion.li variants={item}>
-                        {`Developer`}
+                        {`Development`}
                     </motion.li>
                 </Link>
                 <Link to="/ceramics">
                     <motion.li variants={item} >
-                        {`Artist`}
+                        {`Art`}
                     </motion.li>
                 </Link>
                 <Link to="/design">
                     <motion.li  variants={item}>
-                        {`Designer`}
+                        {`Design`}
                     </motion.li>
                 </Link>
                 <Link to="/educator">
                     <motion.li variants={item}>
-                        {`Educator`}
+                        {`Education`}
                     </motion.li>
                 </Link>
             </motion.ul>
         )
+    }
+}
+
+
+function RenderItem0({developer}) {
+
+    if (developer.video) {
+        return(
+            <FadeTransform
+                in 
+                transformProps={{
+                    exitTransform: 'scale(0.9) '
+            }}>
+                <Card style={{border: 'none'}}>
+                    <Link to={`/works/${developer.id}`}>
+                        <Col  className="wrapper">
+                            <Iframe url={developer.video}
+                                id={developer.id}
+                                frameBorder="0" />
+                            </Col>
+                        <CardTitle style={{fontSize: 30}} className="m-1">{developer.name}</CardTitle>
+                        <CardBody>{developer.description}</CardBody>
+                    </Link>
+                </Card>
+            </FadeTransform>
+        )
+    } else {
+        return(
+            <FadeTransform
+            in 
+                transformProps={{
+                    exitTransform: 'scale(0.9) '
+            }}>
+                <Card style={{border: 'none'}}>
+                    <Link to={`/works/${developer.id}`}>
+                        <CardImg width="100%" src={process.env.PUBLIC_URL + developer.image} /* alt={item.name} */ />
+                        <CardTitle style={{fontSize: 30}}>{developer.name}</CardTitle>
+                        <CardBody>{developer.description}</CardBody>
+                    </Link>
+                </Card>
+            </FadeTransform>
+        )
+        
     }
 }
 
@@ -218,7 +262,8 @@ class Works extends Component {
         this.state = {
             design: DESIGN,
             ceramics: CERAMICS,
-            teachings: TEACHINGS
+            teachings: TEACHINGS,
+            developer: DEVELOPER
             //isCeramicsOpen: true,
             //isDesignOpen: true
         };
@@ -248,6 +293,14 @@ class Works extends Component {
 */
     render() {
 
+        const works0 = this.state.developer.map( developer => {
+            return(
+                <Col key={developer.id} className="col-12 col-md-5 m-1 mx-auto my-auto">
+                    <RenderItem0 developer={developer} />
+                </Col>
+            )}
+        );
+
         const works = this.state.ceramics.map( ceramics => {
             return(
                 <Col key={ceramics.id} className="col-12 col-md-5 m-1 mx-auto my-auto">
@@ -276,6 +329,9 @@ class Works extends Component {
         return(
             <div>
                 <Categories />
+                <Row className="" >
+                    {works0}
+                </Row>
                 <Row className="" >
                     {works}
                 </Row>

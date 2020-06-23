@@ -82,7 +82,7 @@ class Educator extends Component {
 
         return(
             <div>
-                <h1>Educator</h1>
+                <h1>Education</h1>
                 <Row >
                 
                     {works}

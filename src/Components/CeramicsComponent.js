@@ -82,7 +82,7 @@ class Ceramics extends Component {
 
         return(
             <div>
-                <h1>Ceramics</h1>
+                <h1>Art</h1>
                 <Row >
                 
                     {works}

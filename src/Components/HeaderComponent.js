@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Jumbotron, Nav, Navbar, NavItem } from 'reactstrap';
 import { NavLink, Link } from 'react-router-dom';
 import nameWritten from '../media/namewritten.png';
+import Cv from '../media/kk2020.pdf';
 
 class Header extends Component {
     render() {
@@ -27,7 +28,10 @@ class Header extends Component {
                                     <NavLink className="nav-link" to="/about">about </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/cv">cv </NavLink>
+                                    <NavLink className="nav-link" to="/contact">contact me! </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <a href={Cv}>cv </a>
                                 </NavItem>
                             </Navbar>
                         </Nav>
