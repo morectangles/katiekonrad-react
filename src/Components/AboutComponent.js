@@ -7,14 +7,14 @@ class About extends Component {
 
     render() {
 
-        const variants = {
-            hidden: { opacity: 0 },
-            visible: { opacity: 1 },
-        }
+        // const variants = {
+        //     hidden: { opacity: 0 },
+        //     visible: { opacity: 1 },
+        // }
 
         const list = { hidden: { opacity: 0 }, visible: { opacity: 1} }
         const item = { hidden: { x: -10, opacity: 0 }, visible: { opacity: 1} }
-        const item2 = { hidden: { x: -10, opacity: 0 }, visible: { opacity: 1} }
+        //const item2 = { hidden: { x: -10, opacity: 0 }, visible: { opacity: 1} }
 
         return(
             <div>

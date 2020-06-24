@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/* import React, { Component } from 'react';
 import cv from '../media/kk2020.pdf';
 
 class Cv extends Component {
@@ -14,3 +14,4 @@ class Cv extends Component {
 }
 
 export default Cv;
+*/

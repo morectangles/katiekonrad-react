@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardImg, CardImgOverlay, CardTitle, CardSubtitle, Row, Col } from 'reactstrap';
+import { Card, CardImg, CardTitle, CardSubtitle, Row, Col } from 'reactstrap';
 import { DESIGN } from '../shared/design';
-import { baseUrl } from '../shared/baseUrl';
+//import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform } from 'react-animation-components';
-import Iframe from 'react-iframe';
+//import Iframe from 'react-iframe';
  
 function RenderItem({design}) {
 

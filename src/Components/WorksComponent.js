@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardImg, CardSubtitle, CardTitle, CardBody, Row, Col, Button } from 'reactstrap';
+import { Card, CardImg, CardSubtitle, CardTitle, CardBody, Row, Col } from 'reactstrap';
 import { DESIGN } from '../shared/design';
 import { CERAMICS } from '../shared/ceramics';
 import { TEACHINGS } from '../shared/teachings';
 import { DEVELOPER } from '../shared/developer';
-import { baseUrl } from '../shared/baseUrl';
+//import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform } from 'react-animation-components';
 import Iframe from 'react-iframe';
 import { motion } from 'framer-motion';
@@ -52,7 +52,7 @@ class Categories extends Component {
 
         const list = { hidden: { opacity: 0 }, visible: { opacity: 1} };
         const item = { hidden: { x: -10, opacity: 0 }, visible: { opacity: 1} };
-        const item2 = { hidden: { x: -10, opacity: 0 }, visible: { opacity: 1} };
+        //const item2 = { hidden: { x: -10, opacity: 0 }, visible: { opacity: 1} };
     
 
         return(

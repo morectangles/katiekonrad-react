@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Row, Button, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faInstagramSquare, faVimeoV, faGithubSquare  } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 
 

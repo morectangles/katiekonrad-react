@@ -10,7 +10,7 @@ class Header extends Component {
             <div className="container">
                 <Jumbotron className="bg-transparent mt-2" style={{ alignItems: "center" }}>
                     <Link to="/home" >
-                        <img src={nameWritten} height="auto" className="" />
+                        <img src={nameWritten} height="auto" alt="Handwritten Name: Katie Konrad" className="" />
                     </Link>
                 </Jumbotron>
                 <hr class="my-1" />
@@ -28,10 +28,10 @@ class Header extends Component {
                                     <NavLink className="nav-link" to="/about">about </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to="/contact">contact me! </NavLink>
+                                    <NavLink className="nav-link" to="/contact">contact </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <a href={Cv}>cv </a>
+                                    <a className="nav-link" href={Cv}>cv </a>
                                 </NavItem>
                             </Navbar>
                         </Nav>
